@@ -5,22 +5,22 @@ import {
   FeedbackListItem,
 } from './FeedbackOptions.style';
 
-export const FeedbackOptions = ({ onLeaveFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
       <FeedbackList>
         <FeedbackListItem>
-          <Button type="Button" value="good" onClick={onLeaveFeedback}>
+          <Button type="Button" value={options[0]} onClick={onLeaveFeedback}>
             Good
           </Button>
         </FeedbackListItem>
         <FeedbackListItem>
-          <Button type="Button" value="bad" onClick={onLeaveFeedback}>
+          <Button type="Button" value={options[1]} onClick={onLeaveFeedback}>
             Bad
           </Button>
         </FeedbackListItem>
         <FeedbackListItem>
-          <Button type="Button" value="neutral" onClick={onLeaveFeedback}>
+          <Button type="Button" value={options[2]} onClick={onLeaveFeedback}>
             Neutral
           </Button>
         </FeedbackListItem>

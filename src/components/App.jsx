@@ -30,7 +30,10 @@ export class App extends Component {
   render() {
     return (
       <Section title="Please leave feedback">
-        <FeedbackOptions onLeaveFeedback={this.handleFeedback} />
+        <FeedbackOptions
+          options={Object.keys(this.state)}
+          onLeaveFeedback={this.handleFeedback}
+        />
         <Statistics
           good={this.state.good}
           bad={this.state.bad}
